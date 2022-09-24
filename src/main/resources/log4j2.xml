@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="atg" packages="">
+
+    <Appenders>
+
+        <Routing name="TestLogFile">
+            <!--            <JSONLayout complete="true" compact="false"/>-->
+            <Routes pattern="${ctx:ROUTINGKEY}">
+                <Route>
+                    <File
+                            fileName="${ctx:ROUTINGKEY}"
+                            name="appender-${ctx:ROUTINGKEY}"
+                            append="false">
+                        <PatternLayout charset="UTF-8">
+                            <Pattern>[%date{ISO8601}] [%t] [%-5level] %c %M - %m%n</Pattern>
+                        </PatternLayout>
+                    </File>
+                </Route>
+                <Route ref="stdout" key="${ctx:ROUTINGKEY}"/>
+            </Routes>
+            <IdlePurgePolicy timeToLive="60" timeUnit="minutes"/>
+        </Routing>
+
+        <Console name="stdout" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="STDOUT - [%date{ISO8601}] [%t] [%highlight{%-5level}{FATAL=bg_red, ERROR=red, WARN=yellow, INFO=green, DEBUG=blue}] %c %M - %m%n"/>
+        </Console>
+
+    </Appenders>
+
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="stdout" level="${sys:STDOUT_LOG_LEVEL:-WARN}" />
+            <AppenderRef ref="TestLogFile" level="DEBUG" />
+        </Root>
+    </Loggers>
+
+</Configuration>
