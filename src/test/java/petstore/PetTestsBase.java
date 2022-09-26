@@ -2,7 +2,6 @@ package petstore;
 
 import kong.unirest.JsonObjectMapper;
 import kong.unirest.Unirest;
-import kong.unirest.jackson.JacksonObjectMapper;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.logging.log4j.LogManager;
@@ -24,9 +23,9 @@ import java.util.function.Supplier;
 
 public class PetTestsBase {
     protected static final String URL = "https://petstore.swagger.io/v2";
-    private static Logger logger = LogManager.getLogger();
+    private static final Logger logger = LogManager.getLogger();
 
-    private static AtomicLong atg_base_id = new AtomicLong(1101010100);
+    private static final AtomicLong petshop_base_id = new AtomicLong(1101010100);
 
     static PetApi petApi;
 
@@ -59,8 +58,8 @@ public class PetTestsBase {
     void testSetup(TestInfo testInfo)
     {
         // Create testlogfile / test(thread)
-        String testcase = testInfo.getDisplayName()+ ".txt";
-        ThreadContext.put("ROUTINGKEY",testcase);
+        String testcase = testInfo.getDisplayName().replace("()","")+ ".txt";
+        ThreadContext.put("ROUTINGKEY","./testresults/"+testcase);
     }
 
     static Supplier<Category> randomCategorySupplier = ()-> {
@@ -86,7 +85,7 @@ public class PetTestsBase {
 
     static Pet createEmptyPetObject()
     {
-        long id = atg_base_id.addAndGet(1);
+        long id = petshop_base_id.addAndGet(1);
         Pet pet = new Pet();
         pet.setId(id);
         return pet;

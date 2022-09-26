@@ -4,23 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fdc2bbd9-9138-47f4-a84f-e06c8d0911b5" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/petstore/Method.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/petstore/PetApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/petstore/Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/petstore/mappers/ApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/petstore/mappers/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/petstore/mappers/Pet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/petstore/mappers/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/petstore/mappers/Tag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/junit-platform.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/petstore/LoggingInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/petstore/PetTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/petstore/PetTestsBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/harry.jpg" afterDir="false" />
+    <list default="true" id="fdc2bbd9-9138-47f4-a84f-e06c8d0911b5" name="Changes" comment=" testcases PetStore">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atg/pageobjects/AcceptCookiesModal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atg/pageobjects/AtgMainPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atg/pageobjects/BasePageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atg/pageobjects/BettingPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atg/pageobjects/GameType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atg/pageobjects/NewCouponModal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atg/pageobjects/RaceCoupon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atg/pageobjects/SideMenuPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atg/utils/AtgFieldDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atg/utils/FindByAtg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/atg/AtgTestBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/atg/AtgTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/petstore/PetApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petstore/PetApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/petstore/mappers/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petstore/mappers/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/petstore/LoggingInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/petstore/LoggingInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/petstore/PetTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/petstore/PetTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/petstore/PetTestsBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/petstore/PetTestsBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +35,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="Interface" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -46,42 +52,68 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2F46Nw5NocyjtnhJyQrwFrfzzXn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/demo/atg/atgtest/src/main/resources",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/demo/atg/atgtest/src/main/resources&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="atg" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\demo\atg\atgtest\src\main\resources" />
       <recent name="C:\demo\atg\atgtest\src\test\resources" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="atg.pageobjects" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.PetTests.findPetsByMultipleStatusTest">
-    <configuration name="PetTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AtgTests.betOnV4">
+    <configuration name="AtgTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="atgtest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="petstore.*" />
+          <option name="PATTERN" value="atg.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="petstore" />
-      <option name="MAIN_CLASS_NAME" value="petstore.PetTests" />
+      <option name="PACKAGE_NAME" value="atg" />
+      <option name="MAIN_CLASS_NAME" value="atg.AtgTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PetTests.addPetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AtgTests.betOnV4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="atgtest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="atg.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="atg" />
+      <option name="MAIN_CLASS_NAME" value="atg.AtgTests" />
+      <option name="METHOD_NAME" value="betOnV4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PetTests.deletePetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="atgtest" />
       <extension name="coverage">
         <pattern>
@@ -91,7 +123,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="petstore" />
       <option name="MAIN_CLASS_NAME" value="petstore.PetTests" />
-      <option name="METHOD_NAME" value="addPetTest" />
+      <option name="METHOD_NAME" value="deletePetTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -129,29 +161,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PetTests.uploadImageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="atgtest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="petstore.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="petstore" />
-      <option name="MAIN_CLASS_NAME" value="petstore.PetTests" />
-      <option name="METHOD_NAME" value="uploadImageTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PetTests.findPetsByMultipleStatusTest" />
-        <item itemvalue="JUnit.PetTests.uploadImageTest" />
+        <item itemvalue="JUnit.AtgTests.betOnV4" />
+        <item itemvalue="JUnit.AtgTests" />
         <item itemvalue="JUnit.PetTests.updateWithFormPetTest" />
-        <item itemvalue="JUnit.PetTests.addPetTest" />
-        <item itemvalue="JUnit.PetTests" />
+        <item itemvalue="JUnit.PetTests.deletePetTest" />
+        <item itemvalue="JUnit.PetTests.findPetsByMultipleStatusTest" />
       </list>
     </recent_temporary>
   </component>
@@ -171,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663739549096</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary=" testcases PetStore">
+      <created>1664019536784</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664019536784</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -217,15 +240,31 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value=" testcases PetStore" />
+    <option name="LAST_COMMIT_MESSAGE" value=" testcases PetStore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/petstore/PetTests.java</url>
-          <line>234</line>
+          <line>243</line>
           <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/petstore/PetTests.java</url>
+          <line>209</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/atg/pageobjects/BettingPage.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/atg/AtgTests.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="106" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
