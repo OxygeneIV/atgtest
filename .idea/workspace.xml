@@ -6,8 +6,29 @@
   <component name="ChangeListManager">
     <list default="true" id="fdc2bbd9-9138-47f4-a84f-e06c8d0911b5" name="Changes" comment=" testcase ATG">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atg/pageobjects/AcceptCookiesModal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atg/pageobjects/AcceptCookiesModal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atg/pageobjects/AtgMainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atg/pageobjects/AtgMainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atg/pageobjects/BasePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atg/pageobjects/BasePageObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/atg/pageobjects/BettingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atg/pageobjects/BettingPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atg/pageobjects/NewCouponModal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atg/pageobjects/NewCouponModal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/atg/pageobjects/RaceCoupon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atg/pageobjects/RaceCoupon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atg/pageobjects/SideMenuPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atg/pageobjects/SideMenuPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atg/utils/FindByAtg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atg/utils/FindByAtg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/petstore/PetApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petstore/PetApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/petstore/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petstore/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/petstore/mappers/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petstore/mappers/ApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/petstore/mappers/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petstore/mappers/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/petstore/mappers/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petstore/mappers/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/petstore/mappers/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petstore/mappers/Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/junit-platform.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/junit-platform.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/atg/AtgTestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atg/AtgTestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/atg/AtgTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atg/AtgTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/petstore/LoggingInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/petstore/LoggingInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/petstore/PetTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/petstore/PetTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/petstore/PetTestsBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/petstore/PetTestsBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664164175743</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary=" testcase ATG">
+      <created>1664165585968</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664165585968</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

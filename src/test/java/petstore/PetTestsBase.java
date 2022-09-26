@@ -30,8 +30,7 @@ public class PetTestsBase {
     static PetApi petApi;
 
 
-    static
-    {
+    static {
         System.setProperty("log4j2.isThreadContextMapInheritable", "true");
         Unirest.config().defaultBaseUrl(URL);
         Unirest.config().setObjectMapper(new JsonObjectMapper());
@@ -42,33 +41,31 @@ public class PetTestsBase {
             return (responseSummary, exception) -> logger.info("URL: {} Method: {}, Status: {}, time[ms]: {}",
                     requestSummary.getUrl(),
                     requestSummary.getHttpMethod(),
-                    responseSummary!=null ? responseSummary.getStatus() : "-1",
+                    responseSummary != null ? responseSummary.getStatus() : "-1",
                     TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNanos));
         });
     }
 
     @BeforeAll
-    static void suiteSetup()
-    {
+    static void suiteSetup() {
         petApi = new PetApi();
     }
 
 
     @BeforeEach
-    void testSetup(TestInfo testInfo)
-    {
+    void testSetup(TestInfo testInfo) {
         // Create testlogfile / test(thread)
-        String testcase = testInfo.getDisplayName().replace("()","")+ ".txt";
-        ThreadContext.put("ROUTINGKEY","./testresults/"+testcase);
+        String testcase = testInfo.getDisplayName().replace("()", "") + ".txt";
+        ThreadContext.put("ROUTINGKEY", "./testresults/" + testcase);
     }
 
-    static Supplier<Category> randomCategorySupplier = ()-> {
-        int length = RandomUtils.nextInt(5,20);
+    static Supplier<Category> randomCategorySupplier = () -> {
+        int length = RandomUtils.nextInt(5, 20);
         return new Category().setId(RandomUtils.nextLong()).setName(RandomStringUtils.randomAlphabetic(length));
     };
 
-    static Supplier<Tag> randomTagSupplier = ()-> {
-        int length = RandomUtils.nextInt(5,20);
+    static Supplier<Tag> randomTagSupplier = () -> {
+        int length = RandomUtils.nextInt(5, 20);
         return new Tag().setId(RandomUtils.nextLong()).setName(RandomStringUtils.randomAlphabetic(length));
     };
 
@@ -83,16 +80,14 @@ public class PetTestsBase {
         return baseUrl + String.join("/", subs);
     };
 
-    static Pet createEmptyPetObject()
-    {
+    static Pet createEmptyPetObject() {
         long id = petshop_base_id.addAndGet(1);
         Pet pet = new Pet();
         pet.setId(id);
         return pet;
     }
 
-    static Pet createFullPetObject()
-    {
+    static Pet createFullPetObject() {
         Pet pet = createEmptyPetObject();
         pet.addPhotoUrl(randomUrlSupplier.get());
         pet.setCategory(randomCategorySupplier.get());
@@ -100,7 +95,7 @@ public class PetTestsBase {
         pet.addTag(randomTagSupplier.get()).addTag(randomTagSupplier.get());
         // Set init status
         pet.setStatus(Status.available);
-        pet.setName(RandomStringUtils.randomAlphabetic(10,15));
+        pet.setName(RandomStringUtils.randomAlphabetic(10, 15));
         return pet;
     }
 }

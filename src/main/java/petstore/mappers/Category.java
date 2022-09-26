@@ -2,7 +2,7 @@ package petstore.mappers;
 
 public class Category {
     private long id;
-    private String name=null;
+    private String name = null;
 
     public long getId() {
         return id;

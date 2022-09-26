@@ -20,85 +20,85 @@ public class PetApi {
     // --------------------------------------------------------------  API endpoints
     public HttpResponse<Pet> AddPet(Pet pet) {
         HttpResponse<Pet> response =
-                        createRequest(Service.AddPet).body(pet).
+                createRequest(Service.AddPet).body(pet).
                         asObject(Pet.class);
         return response;
     }
 
     public HttpResponse<Pet> FindById(long id) {
         HttpResponse<Pet> response =
-                        createRequest(Service.FindById).
-                                routeParam(ROUTE_PARAM_PETID, String.valueOf(id)).
-                                asObject(Pet.class);
+                createRequest(Service.FindById).
+                        routeParam(ROUTE_PARAM_PETID, String.valueOf(id)).
+                        asObject(Pet.class);
         return response;
     }
 
     public HttpResponse<ApiResponse> Delete(long id) {
         HttpResponse<ApiResponse> response =
-                        createRequest(Service.Delete).
-                                header("api_key","special-key").
-                                routeParam(ROUTE_PARAM_PETID, String.valueOf(id)).
-                                asObject(ApiResponse.class);
+                createRequest(Service.Delete).
+                        header("api_key", "special-key").
+                        routeParam(ROUTE_PARAM_PETID, String.valueOf(id)).
+                        asObject(ApiResponse.class);
         return response;
     }
 
     public HttpResponse<Pet> Update(Pet pet) {
         HttpResponse<Pet> response =
-                        createRequest(Service.Update).
-                                body(pet).
-                                asObject(Pet.class);
+                createRequest(Service.Update).
+                        body(pet).
+                        asObject(Pet.class);
         return response;
     }
 
     public HttpResponse<ApiResponse> UpdateWithFormData(long petId, String name, Status status) {
         HttpResponse<ApiResponse> response =
-                        createRequest(Service.UpdateWithForm,null).  // "application/x-www-form-urlencoded"
-                                routeParam(ROUTE_PARAM_PETID, String.valueOf(petId)).
-                                field("name",name).
-                                field("status",status.toString()).
-                                asObject(ApiResponse.class);
+                createRequest(Service.UpdateWithForm, null).  // "application/x-www-form-urlencoded"
+                        routeParam(ROUTE_PARAM_PETID, String.valueOf(petId)).
+                        field("name", name).
+                        field("status", status.toString()).
+                        asObject(ApiResponse.class);
         return response;
     }
 
     public HttpResponse<List<Pet>> FindPetsByStatus(Status... status) {
 
         List<String> statusList = Arrays.stream(status).map(Enum::toString).collect(Collectors.toList());
-        String commaSeparated=String.join(",",statusList);
+        String commaSeparated = String.join(",", statusList);
 
         HttpResponse<List<Pet>> response =
-                        createRequest(Service.FindByStatus).
-                                queryString("status",commaSeparated).
-                                asObject(new GenericType<>() {
-                                });
+                createRequest(Service.FindByStatus).
+                        queryString("status", commaSeparated).
+                        asObject(new GenericType<>() {
+                        });
         return response;
     }
 
     public HttpResponse<ApiResponse> UploadImage(long id, String metadata, File file) {
 
         HttpResponse<ApiResponse> response =
-                        createRequest(Service.UploadImage,null). // Unirest fixes Content-type
-                                routeParam(ROUTE_PARAM_PETID, String.valueOf(id)).
-                                field("additionalMetadata",metadata).
-                                field("file",file).
-                                asObject(ApiResponse.class);
+                createRequest(Service.UploadImage, null). // Unirest fixes Content-type
+                        routeParam(ROUTE_PARAM_PETID, String.valueOf(id)).
+                        field("additionalMetadata", metadata).
+                        field("file", file).
+                        asObject(ApiResponse.class);
         return response;
     }
 
     // Default, use Content type application/json as we convert Objects to JSON through a mapper
     private HttpRequestWithBody createRequest(Service service) {
-        return createRequest(service,"application/json");
+        return createRequest(service, "application/json");
     }
 
     private HttpRequestWithBody createRequest(Service service, String content_type) {
 
         // Setup request
-        HttpRequestWithBody httpRequestWithBody = Unirest.request(service.getMethod(),service.getEndPoint());
+        HttpRequestWithBody httpRequestWithBody = Unirest.request(service.getMethod(), service.getEndPoint());
 
         // Add headers
         httpRequestWithBody.header("accept", "application/json");
 
-        if(content_type != null)
-            httpRequestWithBody.header("Content-Type",content_type);
+        if (content_type != null)
+            httpRequestWithBody.header("Content-Type", content_type);
 
         return httpRequestWithBody;
     }

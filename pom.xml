@@ -35,9 +35,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-        <groupId>com.konghq</groupId>
-        <artifactId>unirest-java</artifactId>
-        <version>${unirest.version}</version>
+            <groupId>com.konghq</groupId>
+            <artifactId>unirest-java</artifactId>
+            <version>${unirest.version}</version>
         </dependency>
 
         <dependency>

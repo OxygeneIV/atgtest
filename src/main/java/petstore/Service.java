@@ -4,13 +4,13 @@ import static petstore.Method.*;
 
 public enum Service {
 
-    UploadImage(POST,"/pet/{petId}/uploadImage"),
-    AddPet(POST,"/pet"),
-    Update(PUT,"/pet"),
-    UpdateWithForm(POST,"/pet/{petId}"),
-    FindByStatus(GET,"/pet/findByStatus"),
-    FindById(GET,"/pet/{petId}"),
-    Delete(DELETE,"/pet/{petId}");
+    UploadImage(POST, "/pet/{petId}/uploadImage"),
+    AddPet(POST, "/pet"),
+    Update(PUT, "/pet"),
+    UpdateWithForm(POST, "/pet/{petId}"),
+    FindByStatus(GET, "/pet/findByStatus"),
+    FindById(GET, "/pet/{petId}"),
+    Delete(DELETE, "/pet/{petId}");
 
     private final String endPoint;
     private final Method method;
@@ -24,7 +24,7 @@ public enum Service {
     }
 
     Service(Method method, String endPoint) {
-        this.method=method;
+        this.method = method;
         this.endPoint = endPoint;
     }
 

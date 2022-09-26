@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class RaceCoupon extends BasePageObject{
+public class RaceCoupon extends BasePageObject {
 
     private Integer raceNumber;
 
@@ -35,32 +35,28 @@ public class RaceCoupon extends BasePageObject{
     @FindByAtg(testIdEndsWith = "-toggle-all")
     WebElement allHorsesButton;
 
-    private By startButtonBuilder(Integer horseNumber)
-    {
+    private By startButtonBuilder(Integer horseNumber) {
         String startButtonAttribute = String.format("[data-test-id='coupon-button-leg-%s-start-%s']", getRaceNumber(), horseNumber);
         By by = By.cssSelector(startButtonAttribute);
         return by;
     }
 
-    public RaceCoupon betOnRandomHorses(Integer numberOfHorses)
-    {
+    public RaceCoupon betOnRandomHorses(Integer numberOfHorses) {
         List<Integer> validHorses = getValidHorses();
         Collections.shuffle(validHorses);
 
         List<Integer> harryList = validHorses.subList(0, numberOfHorses);
-        for (Integer horseNumber:harryList
-             ) {
+        for (Integer horseNumber : harryList
+        ) {
             betOnHorse(horseNumber);
         }
         return this;
     }
 
-    public RaceCoupon betOnHorse(Integer horseNumber)
-    {
+    public RaceCoupon betOnHorse(Integer horseNumber) {
         List<Integer> validHorses = getValidHorses();
 
-        if(!validHorses.contains(horseNumber))
-        {
+        if (!validHorses.contains(horseNumber)) {
             return this;
         }
 
@@ -71,21 +67,19 @@ public class RaceCoupon extends BasePageObject{
         return this;
     }
 
-    public RaceCoupon betOnAllHorses()
-    {
+    public RaceCoupon betOnAllHorses() {
         allHorsesButton.click();
         return this;
     }
 
 
-    private List<Integer> getValidHorses()
-    {
+    private List<Integer> getValidHorses() {
         // Conditions
         // Not disabled or scratched
         List<WebElement> buttons = new ArrayList<>(startNumberButtons);
 
-        Boolean removedA = buttons.removeIf(btn->btn.getDomAttribute("disabled")!=null);
-        Boolean removedB = buttons.removeIf(btn->"true".equals(btn.getDomAttribute("data-test-scratched")));
+        Boolean removedA = buttons.removeIf(btn -> btn.getDomAttribute("disabled") != null);
+        Boolean removedB = buttons.removeIf(btn -> "true".equals(btn.getDomAttribute("data-test-scratched")));
 
         // Collect numbers
         List<Integer> startNumbers = buttons.stream().

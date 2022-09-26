@@ -35,15 +35,13 @@ public @interface FindByAtg {
 
             String selector;
 
-            if(!"".equals(findBy.testId())) {
-                 selector = String.format("[data-test-id='%s']", findBy.testId());
+            if (!"".equals(findBy.testId())) {
+                selector = String.format("[data-test-id='%s']", findBy.testId());
             } else if (!"".equals(findBy.testIdStartsWith())) {
-                 selector = String.format("[data-test-id^='%s']", findBy.testIdStartsWith());
-            }else if (!"".equals(findBy.testIdEndsWith())) {
+                selector = String.format("[data-test-id^='%s']", findBy.testIdStartsWith());
+            } else if (!"".equals(findBy.testIdEndsWith())) {
                 selector = String.format("[data-test-id$='%s']", findBy.testIdEndsWith());
-            }
-            else
-            {
+            } else {
                 throw new RuntimeException("Error in ATG FindBY");
             }
 

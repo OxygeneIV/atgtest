@@ -2,8 +2,8 @@ package petstore.mappers;
 
 public class ApiResponse {
     private int code;
-    private String type=null;
-    private String message=null;
+    private String type = null;
+    private String message = null;
 
     public int getCode() {
         return code;
@@ -31,7 +31,6 @@ public class ApiResponse {
         this.message = message;
         return this;
     }
-
 
 
 }

@@ -10,22 +10,20 @@ public class AtgTestBase {
     protected WebDriver driver;
 
     @BeforeEach
-    void setupBrowser()
-    {
+    void setupBrowser() {
 
         driver = WebDriverManager.chromedriver().create();
 
-        if(System.getProperty("MAX","0").equals("1"))
-           driver.manage().window().maximize();
+        if (System.getProperty("MAX", "0").equals("1"))
+            driver.manage().window().maximize();
 
         // Navigate
         driver.get("https://www.atg.se");
     }
 
     @AfterEach
-    void teardown()
-    {
-            // Sleep for a while
+    void teardown() {
+        // Sleep for a while
         try {
             Thread.sleep(4000);
         } catch (InterruptedException e) {

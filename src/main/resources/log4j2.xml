@@ -30,8 +30,8 @@
 
     <Loggers>
         <Root level="INFO">
-            <AppenderRef ref="stdout" level="${sys:STDOUT_LOG_LEVEL:-WARN}" />
-            <AppenderRef ref="TestLogFile" level="DEBUG" />
+            <AppenderRef ref="stdout" level="${sys:STDOUT_LOG_LEVEL:-WARN}"/>
+            <AppenderRef ref="TestLogFile" level="DEBUG"/>
         </Root>
     </Loggers>
 

@@ -3,12 +3,11 @@ package atg;
 import atg.pageobjects.*;
 import org.junit.jupiter.api.Test;
 
-public class AtgTests extends AtgTestBase{
+public class AtgTests extends AtgTestBase {
 
 
     @Test
-    void betOnV4()
-    {
+    void betOnV4() {
         // #1, Launch and handle cookies
         AtgMainPage atgMainPage = new AtgMainPage(driver);
         atgMainPage.acceptCookies();

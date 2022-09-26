@@ -220,8 +220,8 @@ public class PetTests extends PetTestsBase {
         String resourceFile = "harry.jpg";
         java.net.URL resource = getClass().getClassLoader().getResource(resourceFile);
 
-        if(resource==null)
-            throw new RuntimeException("Resource File not found for use in test: "+resourceFile);
+        if (resource == null)
+            throw new RuntimeException("Resource File not found for use in test: " + resourceFile);
 
         File file;
         long bytes;
