@@ -3,6 +3,7 @@ Requirement: Maven installed
 Project developed using Java 11
 
 // ------------------------ PetStore tests
+
 mvn -Dtest=PetTests test
 
 JUnit5 is used, configured to run all tests in parallell.
@@ -13,6 +14,7 @@ Each test (thread) writes to a separate log file.
 
 
 // ------------------------ ATG test
+
 mvn -Dtest=AtgTests test
 
 A few PageObjects have been created.
