@@ -66,10 +66,6 @@ public class RaceCoupon extends BasePageObject{
 
         // Create locator at runtime
         By by = startButtonBuilder(horseNumber);
-        WebElement me = getWrappedElement();
-        boolean displayed = me.isDisplayed();
-        WebElement element2 = me.findElement(by);
-        WebElement element1 = by.findElement(getWrappedElement());
         WebElement element = this.findElement(by);
         element.click();
         return this;

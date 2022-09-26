@@ -15,6 +15,10 @@ public class BettingPage extends BasePageObject{
 
     @FindByAtg(testId = "calendar-next-day-button")
     WebElement nextDayBtn;
+    @FindByAtg(testId = "calendar-previous-day-button")
+    WebElement prevDayBtn;
+
+
 
     // need the link for click...
     @FindBy(xpath=".//a[.//*[@data-test-id='calendar-menu-gameType-V4']]")
@@ -59,6 +63,16 @@ public class BettingPage extends BasePageObject{
     public void bet()
     {
         betButton.click();
+    }
+
+
+    public BettingPage backDays(int days)
+    {
+      for (int i=0;i<days;i++)
+      {
+          prevDayBtn.click();
+      }
+      return this;
     }
 
     public BettingPage findRace() {
